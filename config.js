@@ -13,7 +13,7 @@ window.SITE_CONFIG = {
 
   // Supabase > Project Settings > API. A anon/publishable key é pública por definição;
   // proteja os dados com RLS. NUNCA use a service_role key no frontend.
-  supabaseUrl: "https://levzppfsohjkdntvheev.supabase.co/rest/v1/",
+  supabaseUrl: "https://levzppfsohjkdntvheev.supabase.co",
   supabaseAnonKey: "sb_publishable_jXaoxGkSibwMmcb0_aeFsQ_3DzkNLTj",
   supabaseTable: "leads",
 
