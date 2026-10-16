@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="Baixe gratuitamente o e-book e receba acesso ao material após um cadastro rápido.">
+  <title>Seu próximo passo começa aqui | E-book gratuito</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="announcement"><span class="announcement-dot"></span> MATERIAL GRATUITO · ACESSO IMEDIATO APÓS O CADASTRO</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Página inicial"><span class="brand-mark">L</span><span>LEITURA<span class="brand-light"> LIVRE</span></span></a>
+    <span class="header-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5.2c0 4.7 3.2 8.1 7.5 9.8 4.3-1.7 7.5-5.1 7.5-9.8V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg> Download seguro</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> SEU GUIA GRATUITO</div>
+        <h1>Conhecimento que transforma. <em>Resultados que ficam.</em></h1>
+        <p class="hero-description">Baixe nosso e-book gratuito e descubra ideias práticas para sair da teoria e começar a colocar seus próximos objetivos em ação.</p>
+        <ul class="benefit-list">
+          <li><span class="check">✓</span><span><strong>Conteúdo direto ao ponto</strong><small>Sem enrolação: vá direto ao que importa.</small></span></li>
+          <li><span class="check">✓</span><span><strong>Aprenda no seu ritmo</strong><small>Um material para consultar quando quiser.</small></span></li>
+          <li><span class="check">✓</span><span><strong>100% gratuito</strong><small>Cadastre-se e libere o PDF nesta página.</small></span></li>
+        </ul>
+        <div class="social-proof"><div class="proof-icon">✦</div><p><strong>Um passo de cada vez.</strong><br><span>Invista alguns minutos no seu desenvolvimento.</span></p></div>
+      </div>
+
+      <div class="download-panel" id="cadastro">
+        <div class="book-scene" aria-label="Ilustração de capa de e-book">
+          <div class="book-shadow"></div>
+          <div class="book">
+            <div class="book-topline">GUIA PRÁTICO · EDIÇÃO GRATUITA</div>
+            <div class="book-symbol"><span>✳</span></div>
+            <div class="book-title">IDEIAS<br><i>em ação.</i></div>
+            <div class="book-subtitle">Um guia para aprender, planejar e evoluir.</div>
+            <div class="book-footer"><span>LEITURA LIVRE</span><span>PDF · GRATUITO</span></div>
+          </div>
+          <div class="floating-stamp"><span>SEU</span><strong>PDF</strong><small>GRÁTIS</small></div>
+        </div>
+
+        <div class="form-card">
+          <div class="form-heading">
+            <span class="step-label">É RÁPIDO E GRATUITO</span>
+            <h2>Receba seu e-book</h2>
+            <p>Preencha seus dados para liberar o download.</p>
+          </div>
+          <form id="lead-form" novalidate>
+            <div class="field">
+              <label for="fullName">Nome completo</label>
+              <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Como podemos chamar você?" required minlength="3" maxlength="120">
+              <small class="field-error" id="name-error"></small>
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required maxlength="254">
+              <small class="field-error" id="email-error"></small>
+            </div>
+            <div class="field">
+              <label for="phone">Telefone com DDD</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(19) 99999-9999" required maxlength="15" aria-describedby="phone-hint phone-error">
+              <small class="field-hint" id="phone-hint">Ex.: (19) 99999-9999</small>
+              <small class="field-error" id="phone-error"></small>
+            </div>
+            <label class="consent">
+              <input id="consent" name="consent" type="checkbox" required>
+              <span>Li e concordo com o uso dos meus dados para registrar meu pedido e disponibilizar o e-book, conforme a <button type="button" class="text-button" id="privacy-open">Política de Privacidade</button>.</span>
+            </label>
+            <small class="field-error consent-error" id="consent-error"></small>
+            <button class="submit-button" id="submit-button" type="submit"><span class="button-label">Quero receber meu e-book</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+            <p class="privacy-note"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Seus dados são tratados com cuidado e não são exibidos publicamente.</p>
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+
+          <section class="success-panel" id="success-panel" hidden aria-live="polite">
+            <div class="success-icon">✓</div>
+            <h3>Cadastro confirmado!</h3>
+            <p id="success-copy">Seu cadastro foi registrado. Seu e-book está pronto para baixar.</p>
+            <a class="download-button" id="download-link" href="assets/ebook.pdf" download><span>↓</span> Baixar e-book em PDF</a>
+            <p class="success-small" id="email-status"></p>
+            <a class="whatsapp-button" id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer">Continuar pelo WhatsApp ↗</a>
+            <p class="whatsapp-explain" id="whatsapp-explain">O WhatsApp abrirá com uma mensagem pronta. Você decide se deseja enviá-la.</p>
+            <button type="button" class="reset-button" id="new-registration">Voltar ao formulário</button>
+          </section>
+        </div>
+        <div class="under-card"><span>PDF</span> Arquivo digital <i>•</i> <span>GRÁTIS</span> Sem compromisso</div>
+      </div>
+    </section>
+
+    <section class="bottom-strip">
+      <div><span class="strip-icon">↗</span><p><strong>Comece hoje</strong><small>Pequenas ações geram progresso.</small></p></div>
+      <div><span class="strip-icon">◎</span><p><strong>Leia onde quiser</strong><small>Use o PDF no celular ou computador.</small></p></div>
+      <div><span class="strip-icon">⌁</span><p><strong>Sem custo</strong><small>O material é totalmente gratuito.</small></p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">L</span><span>LEITURA<span class="brand-light"> LIVRE</span></span></a>
+    <p>© <span id="year"></span> Leitura Livre. Material gratuito para fins educativos.</p>
+    <button type="button" class="footer-privacy" id="privacy-open-footer">Privacidade</button>
+  </footer>
+
+  <dialog id="privacy-dialog" class="privacy-dialog">
+    <div class="dialog-head"><div><span class="step-label">TRANSPARÊNCIA</span><h2>Política de Privacidade</h2></div><button type="button" id="privacy-close" class="close-button" aria-label="Fechar">×</button></div>
+    <div class="privacy-content">
+      <p><strong>Quais dados coletamos?</strong> Nome completo, e-mail, telefone e registro do consentimento informado no formulário.</p>
+      <p><strong>Para quê?</strong> Registrar sua solicitação, disponibilizar o e-book e, se configurado, enviar uma confirmação por e-mail. O contato por WhatsApp depende da ação do usuário ou de uma integração oficial devidamente configurada.</p>
+      <p><strong>Onde ficam armazenados?</strong> No serviço de dados configurado pelo responsável pelo site. No modo de demonstração, o cadastro não é enviado para um banco de dados; a confirmação é apenas simulada no navegador.</p>
+      <p><strong>Compartilhamento e retenção:</strong> Os dados devem ser acessados somente por pessoas autorizadas e mantidos apenas pelo período necessário às finalidades informadas e obrigações aplicáveis. Não use este modelo sem configurar permissões e política de retenção.</p>
+      <p><strong>Seus direitos:</strong> Você pode solicitar confirmação, acesso, correção ou exclusão dos dados, conforme a legislação aplicável.</p>
+      <p><strong>Responsável e contato:</strong> substitua este texto pelo nome/razão social do controlador e por um e-mail de contato válido antes de publicar.</p>
+      <p class="privacy-warning">Modelo inicial: esta política deve ser revisada e adaptada à operação real antes de colocar o site em produção.</p>
+    </div>
+  </dialog>
+  <script>
+    // Fallback para o ano caso o script principal ainda não tenha carregado.
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
