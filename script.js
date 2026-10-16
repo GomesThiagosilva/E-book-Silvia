@@ -97,7 +97,8 @@
     if (!config.supabaseUrl || !config.supabaseAnonKey) {
       throw new Error("O Supabase não está configurado. Preencha a URL e a chave pública em config.js ou ative demoMode para testar.");
     }
-    const endpoint = `${config.supabaseUrl.replace(/\/$/, "")}/rest/v1/${encodeURIComponent(config.supabaseTable || "leads")}`;
+    const baseUrl = config.supabaseUrl.replace(/\/+$/, "").replace(/\/rest\/v1$/, "");
+const endpoint = `${baseUrl}/rest/v1/${encodeURIComponent(config.supabaseTable || "leads")}`;
     const response = await fetch(endpoint, {
       method: "POST",
       headers: {
